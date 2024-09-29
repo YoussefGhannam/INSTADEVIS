@@ -1,0 +1,107 @@
+.bg-video {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.bg-video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.bg-video .content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.bg-video .content h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.bg-video form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+}
+.bg-video form input {
+  padding: 10px 10px 10px 20px;
+  margin-bottom: 15px;
+  border: 1px solid rgb(255, 235, 193);
+  border-radius: 35px;
+  outline: none;
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: white;
+  text-shadow: 0 0 5px rgba(245, 245, 245, 0.7);
+  width: 70%;
+  height: 50px;
+}
+.bg-video form input::placeholder {
+  color: white;
+  font-size: 1em;
+}
+.bg-video form input.ng-invalid.ng-touched {
+  border-color: #ff4d4d;
+}
+.bg-video form input.ng-valid.ng-touched {
+  border-color: #4caf50;
+}
+.bg-video form button {
+  display: none;
+}
+.error-message {
+  color: #ff4d4d;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .bg-video .content {
+    width: 70%;
+    height: 100%;
+  }
+  .bg-video .content h1 {
+    font-size: 1.5em;
+  }
+  .bg-video form input {
+    width: 90%;
+    font-size: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .bg-video .content {
+    width: 90%;
+    height: auto;
+    padding: 10px;
+  }
+  .bg-video .content h1 {
+    font-size: 1.2em;
+  }
+  .bg-video form {
+    max-width: 100%;
+  }
+  .bg-video form input {
+    width: 100%;
+    font-size: 18px;
+    height: 40px;
+  }
+  .bg-video form input::placeholder {
+    font-size: 0.9em;
+  }
+}
